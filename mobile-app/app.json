@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "MapMyIssues",
+    "slug": "mapmyissues-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#005fcc"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mapmyissues.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to your camera to take photos of issues.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to select photos.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location to report issues accurately."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#005fcc"
+      },
+      "package": "com.mapmyissues.mobile",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow MapMyIssues to access your camera to take photos of issues."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow MapMyIssues to use your location to report issues accurately."
+        }
+      ]
+    ]
+  }
+}
